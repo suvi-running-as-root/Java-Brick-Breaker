@@ -50,3 +50,22 @@ No extra libraries are required — it runs on pure Java.
    ```bash
    git clone https://github.com/suvi-running-as-root/Java-Brick-Breaker.git
    cd Java-Brick-Breaker
+2. Open the project in VS Code
+
+3. Go to File → Open Folder
+
+4. Select the Java-Brick-Breaker folder
+
+5. Install Java Extensions
+
+6. Open Extensions (Ctrl+Shift+X)
+
+7. Search for Java Extension Pack and install it
+
+Run the Game
+
+1. Open the file Main.java
+
+2. Click the Run ▶️ button on the top right (or press Ctrl+F5)
+
+3. The Brick Breaker window will open — play and enjoy!
