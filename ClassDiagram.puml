@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Drawable {
+    +draw(Graphics2D g)
+}
+
+abstract class GameObject {
+    -x: int
+    -y: int
+    +GameObject(x: int, y: int)
+    +draw(Graphics2D g): void
+}
+
+class BrickMap {
+    -brickLayout: int[][]
+    -brickWidth: int
+    -brickHeight: int
+    -moveOffsets: int[]
+    -moveRight: boolean[]
+    -brickImage: BufferedImage
+    +BrickMap(rows: int, columns: int, screenWidth: int, screenHeight: int, level: int)
+    +setBrickValue(value: int, row: int, col: int): void
+    +draw(Graphics2D g, level: int): void
+    +update(level: int, screenWidth: int): void
+}
+
+class GamePanel {
+    -brickMap: BrickMap
+    -ball: Ball
+    -paddle: Paddle
+    -gameObjects: List<GameObject>
+    +GamePanel()
+    +paintComponent(g: Graphics): void
+}
+
+class Main {
+    +main(args: String[]): void
+    +startGame(): void
+}
+
+Main --> GamePanel
+GamePanel --> BrickMap
+BrickMap --> Drawable
+GameObject <|-- Ball
+GameObject <|-- Paddle
+Ball --> Drawable
+Paddle --> Drawable
+BrickMap ..|> Drawable
+
+@enduml
