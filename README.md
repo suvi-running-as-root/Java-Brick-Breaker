@@ -48,5 +48,5 @@ No extra libraries are required — it runs on pure Java.
 
 1. **Clone this repo**
    ```bash
-   git clone https://github.com/your-username/BrickBreakerGame.git
+   git clone https://github.com/suvi-running-as-root/Brick-Breaker.git
    cd BrickBreakerGame
